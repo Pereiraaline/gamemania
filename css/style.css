@@ -8,6 +8,31 @@
   src: url(../fonts/TitilliumWeb-Regular.ttf);
 }
 
+ /************** RESPONSIVIDADE  **************/
+
+
+  @media screen and (max-width: 768px){
+    
+    /* CABEÇALHO */
+    .header{width: 100%; justify-content: center;}
+    .header .menu{width: 80%}
+    .container-grid {width: 80%;}
+    .imagem-logo{width: 100%; justify-content: center; margin-inline-end: 0%; max-width: 100px; }
+    .menu{width: 90%; padding: 0; justify-content: space-between; margin-inline-end: 2%;}
+    .item-menu{font-size: 13px; margin-left: 0; margin-right: 0; padding: 0; justify-content: space-between;}
+    
+    /* BANNER */
+    .banner{height: 300px;}
+    .banner-box{height: 300px;}
+    .imagem-banner img{ max-width: 300px;max-height: 200px; justify-content: center;}
+    .banner-info h2 {font-size: 40px;}
+    .banner-info p{font: 20px;}
+    .banner-info  .botao-banner{ width: 130px; height: 25px; font-size: 13px;}
+    
+  }
+  
+
+
 
  /************** MENU - CABEÇALHO  **************/
 
