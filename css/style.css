@@ -8,31 +8,6 @@
   src: url(../fonts/TitilliumWeb-Regular.ttf);
 }
 
- /************** RESPONSIVIDADE  **************/
-
-
-  @media screen and (max-width: 768px){
-    
-    /* CABEÇALHO */
-    .header{width: 100%; justify-content: center;}
-    .header .menu{width: 80%}
-    .container-grid {width: 80%;}
-    .imagem-logo{width: 100%; justify-content: center; margin-inline-end: 0%; max-width: 100px; }
-    .menu{width: 90%; padding: 0; justify-content: space-between; margin-inline-end: 2%;}
-    .item-menu{font-size: 13px; margin-left: 0; margin-right: 0; padding: 0; justify-content: space-between;}
-    
-    /* BANNER */
-    .banner{height: 300px;}
-    .banner-box{height: 300px;}
-    .imagem-banner img{ max-width: 300px;max-height: 200px; justify-content: center;}
-    .banner-info h2 {font-size: 40px;}
-    .banner-info p{font: 20px;}
-    .banner-info  .botao-banner{ width: 130px; height: 25px; font-size: 13px;}
-    
-  }
-  
-
-
 
  /************** MENU - CABEÇALHO  **************/
 
@@ -42,7 +17,7 @@
     box-sizing: border-box;
   }
 
-  header {
+.header {
     background-color: white;
 }
 
@@ -352,4 +327,79 @@ margin-top: 10px;
 .rodape .redes-sociais .logo-redes-sociais{
   display: flex;
   justify-content: space-between
+}
+
+/************** RESPONSIVIDADE  **************/
+
+/* TABLET */
+
+@media screen and (max-width: 967px){
+
+  /* CABEÇALHO */
+.header-flex .imagem-logo{width: 90px; margin-inline-start: 0%;}
+header .menu {justify-content: space-around; max-width: 700px;}
+header .item-menu {font-size: 13px;}
+ 
+  /* BANNER */
+  .banner {height: 350px;}
+  .banner .banner-box{height: 350px; align-items: center; justify-content: space-around;}
+  .banner .banner-box .imagem-banner{justify-content:center; size: cover;} 
+  .banner-box .imagem-banner img{border-radius: 10px;height: 230px; width: 360px; position: absolute; top: 100px; left: 30px;z-index: 1;}
+  .banner .banner-box .banner-info{width: 300px; height: 200px; position: absolute; z-index: 2; top: 110px; left: 55%;}
+  .banner .banner-box .banner-info h2{font-size: 40px;}
+  .banner .banner-box .banner-info p{font-size: 15px;}
+  .banner .banner-box .banner-info .botao-banner{height: 30px; width: 100px; border-radius: 8px;width: 160px;height: 40px;font-size: 15px;}
+  
+
+  /* SOBRE NÓS */
+  .sobre-nos-box{height: 400px; margin-inline-end: 3%;}
+  .imagem-sobre-nos{width: 400px; margin-inline-start:2%;margin-top: -1%;}
+  .imagem-sobre-nos img{border-radius: 10px; width: 100%; height: 250px;}
+  .sobre-nos-info{width: 300px;height: 200px; margin-inline-start: 3%;}
+  .sobre-nos-info h4{ font-size: 1.25rem;margin-block-end: 10px; margin-top:-30px;}
+  .sobre-nos-info p{font-size: 0.9rem;} 
+
+  /* RODAPÉ */
+  .rodape-box{width: 740px;}
+  .departamentos{padding: 0; margin-right: 2%;}
+  .institucional{margin-right: 2%;}
+  .minha-conta{margin-right: 2%;}
+  .contato{margin-right: 2%;}
+  .redes-sociais .logo-redes-sociais{flex-direction: column; align-items: flex-start;}
+  .redes-sociais .logo-redes-sociais .insta{margin: 4%;}
+  .redes-sociais .logo-redes-sociais .face{margin: 4%;}
+  .redes-sociais .logo-redes-sociais .whats{margin: 4%;}
+}
+
+/* SMARTPHONE */
+
+@media screen and (max-width: 767px){
+
+  /* CABEÇALHO */
+.header-flex .imagem-logo{width: 90px; margin-inline-start: 0%;}
+header .menu {justify-content: space-around; max-width: 700px;}
+header .item-menu {font-size: 13px;}
+ 
+  /* BANNER */
+  .banner {height: 350px;}
+  .banner .banner-box{height: 350px; align-items: center; justify-content: space-around;}
+  .banner .banner-box .imagem-banner{justify-content:center; size: cover;} 
+  .banner-box .imagem-banner img{border-radius: 10px;height: 230px; width: 330px; position: absolute; top: 98px; left: 25px;z-index: 1;}
+  .banner .banner-box .banner-info{width: 300px; height: 200px; position: absolute; z-index: 2; top: 170px; left: 13%;}
+  .banner .banner-box .banner-info h2{font-size: 40px; margin-bottom: 0; font-stretch: condensed;}
+  .banner .banner-box .banner-info p{font-size: 15px; margin-bottom: 0;}
+  .banner .banner-box .banner-info .botao-banner{height: 30px; width: 100px; border-radius: 8px;width: 160px;height: 40px;font-size: 15px;}
+   
+  /* MAIS VENDIDOS */
+   .container.titulo h3{font-size: 1.8rem; height: 30px; margin-top: 2%;margin-bottom: 5%;}
+   .card .card-img-top{height: 150px; width: 200px; margin: 0 auto;}
+   .card .card-body .card-title{font-size: 1.1rem;}
+   .card .card-body .card-text{font-size: 0.9rem;}
+ 
+
+  /* SOBRE NÓS */
+  
+
+  /* RODAPÉ */
+  
 }
