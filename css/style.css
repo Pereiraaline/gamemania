@@ -33,6 +33,10 @@
   margin-inline-start: 0%;
 }
 
+.header-flex .btn-mobile{
+  display: none;
+}
+
 header .header-flex {
     display: flex;
     height: 60px;
@@ -57,6 +61,9 @@ header .item-menu {
     text-transform: uppercase;
     font-family: "roboto regular";
     }
+
+
+
  
 
 /************** BANNER **************/
@@ -249,6 +256,7 @@ margin-top: 10px;
 .rodape{
   background-image: linear-gradient(90deg, #211818, #0099ca);
 }
+
 .rodape-box{
   display: flex;
   flex-direction: row;
@@ -336,21 +344,25 @@ margin-top: 10px;
 @media screen and (max-width: 967px){
 
   /* CABEÇALHO */
-.header-flex .imagem-logo{width: 90px; margin-inline-start: 0%;}
-header .menu {justify-content: space-around; max-width: 700px;}
-header .item-menu {font-size: 13px;}
+.container-grid {max-width: 700px;}
+.header-flex .btn-mobile {display: flex; border: none; background: none; margin-inline-end: 1vh}
+.header-flex .btn-mobile img{height: 40px; width: 50px;}
+.header-flex .imagem-logo img{height: 50px;}
+header .menu {display: block; position: absolute; flex-direction: column; width: 50%; height:0px; align-items: center; justify-content: space-around; background-color:#ffffff; right: 0px; top:60px; z-index: 10000; transition:.6s; visibility: hidden; overflow-y: hidden;}
+header .menu.active {display: flex; height: 100vh; visibility: visible; overflow-y: auto;}
+
+
  
   /* BANNER */
-  .banner {height: 350px;}
+  .banner {height: 300px;}
   .banner .banner-box{height: 350px; align-items: center; justify-content: space-around;}
   .banner .banner-box .imagem-banner{justify-content:center; size: cover;} 
-  .banner-box .imagem-banner img{border-radius: 10px;height: 230px; width: 360px; position: absolute; top: 100px; left: 30px;z-index: 1;}
+  .banner-box .imagem-banner img{border-radius: 10px;height: 200px; width: 360px; position: absolute; top: 100px; left: 30px;z-index: 1;}
   .banner .banner-box .banner-info{width: 300px; height: 200px; position: absolute; z-index: 2; top: 110px; left: 55%;}
   .banner .banner-box .banner-info h2{font-size: 40px;}
   .banner .banner-box .banner-info p{font-size: 15px;}
   .banner .banner-box .banner-info .botao-banner{height: 30px; width: 100px; border-radius: 8px;width: 160px;height: 40px;font-size: 15px;}
-  
-
+ 
   /* SOBRE NÓS */
   .sobre-nos-box{height: 400px; margin-inline-end: 3%;}
   .imagem-sobre-nos{width: 400px; margin-inline-start:2%;margin-top: -1%;}
@@ -375,31 +387,61 @@ header .item-menu {font-size: 13px;}
 
 @media screen and (max-width: 767px){
 
-  /* CABEÇALHO */
-.header-flex .imagem-logo{width: 90px; margin-inline-start: 0%;}
-header .menu {justify-content: space-around; max-width: 700px;}
-header .item-menu {font-size: 13px;}
+   /* CABEÇALHO */
+   .container-grid {width: 70vh;}
+   .header-flex .btn-mobile {display: flex; border: none; background: none; margin-inline-end: 3vh}
+   .header-flex .btn-mobile img{height: 40px; width: 50px;}
+   .header-flex .imagem-logo img{height: 50px; margin-inline-start: 3vh;}
+   header .menu {display: block; position: absolute; flex-direction: column; width: 100%; justify-content: space-around; background-color:#ffffff; top:60px; z-index: 10000; left: 30%; transition:.6s; visibility: hidden; overflow-y: hidden;}
+   header .menu.active {display: flex; left: 30%; height: 100vh; visibility: visible; overflow-y: auto;}
+   
+    
  
   /* BANNER */
-  .banner {height: 350px;}
-  .banner .banner-box{height: 350px; align-items: center; justify-content: space-around;}
+
+  .banner {height: 50vh; width: 70vh;}
+  .banner .banner-box{height: 50vh; align-items: center; justify-content: space-around;}
   .banner .banner-box .imagem-banner{justify-content:center; size: cover;} 
-  .banner-box .imagem-banner img{border-radius: 10px;height: 230px; width: 330px; position: absolute; top: 98px; left: 25px;z-index: 1;}
-  .banner .banner-box .banner-info{width: 300px; height: 200px; position: absolute; z-index: 2; top: 170px; left: 13%;}
-  .banner .banner-box .banner-info h2{font-size: 40px; margin-bottom: 0; font-stretch: condensed;}
-  .banner .banner-box .banner-info p{font-size: 15px; margin-bottom: 0;}
-  .banner .banner-box .banner-info .botao-banner{height: 30px; width: 100px; border-radius: 8px;width: 160px;height: 40px;font-size: 15px;}
-   
+  .banner-box .imagem-banner img{border-radius: 10px; height: 240px; width: 420px; position: absolute; top: 14vh; left: 4vh; z-index: 1;}
+  .banner .banner-box .banner-info{width: 300px; height: 230px; position: absolute; z-index: 2; top: 23vh; left: 12vh;}
+  .banner .banner-box .banner-info h2{font-size: 45px; margin-bottom: 0; font-stretch: condensed;}
+  .banner .banner-box .banner-info p{font-size: 17px; margin-bottom: 0;}
+  .banner .banner-box .banner-info .botao-banner{height: 30px; width: 100px; border-radius: 8px; width: 160px; height: 40px;font-size: 15px; top: 40vh;}
+    
+
   /* MAIS VENDIDOS */
-   .container.titulo h3{font-size: 1.8rem; height: 30px; margin-top: 2%;margin-bottom: 5%;}
-   .card .card-img-top{height: 150px; width: 200px; margin: 0 auto;}
-   .card .card-body .card-title{font-size: 1.1rem;}
-   .card .card-body .card-text{font-size: 0.9rem;}
+
+  #destaques{width: 70vh;} 
+  .row-cols-1{max-width: 80%;}
+  .row{margin-top: 0; border-radius: 0px; margin: 0 auto; max-width: 80%;}
+  .container.titulo h3{font-size: 1.8rem; height: 30px; margin-top: 2%;margin-bottom: 5%; margin: 0 auto;}
+  .card .card-img-top{height: 150px; width: 200px; margin: 0 auto;}
+  .card .card-body .card-title{font-size: 1.1rem;}
+  .card .card-body .card-text{font-size: 0.9rem;}
  
 
-  /* SOBRE NÓS */
+ /* SOBRE NÓS */
+
+ .sobre-nos{width: 70vh;}
+ .sobre-nos-box{height: 480px; margin-inline-end: 3%; flex-direction: column;}
+ .imagem-sobre-nos{width: 320px; margin-inline-start:2%;}
+ .imagem-sobre-nos img{border-radius: 10px; width: 100%; height: 230px;}
+ .sobre-nos-info {width: 320px;height: 200px; margin-inline-start: 3%;}
+ .sobre-nos-info h4{ font-size: 2rem; margin-block-end: 3vh; margin-top: 3vh;}
+ .sobre-nos-info .p{font-size: 1.6rem;} 
+ .sobre-nos-info .container-p2{display: none;} 
   
 
   /* RODAPÉ */
-  
+  .rodape{width: 70vh; align-items: center; width: 70vh; height: 750px;}
+  .rodape-box{margin: 0 auto; width: 40vh; display: flex; flex-direction: column-reverse; flex-wrap: wrap;}
+  .rodape .redes-sociais .logo-redes-sociais{flex-direction: row-reverse; width: 30vh; margin: 0 auto;margin-top: 1vh}
+  .rodape .redes-sociais h5{margin: 0 auto; width: 30vh;margin-top: 2vh;}
+  .rodape .rodape-box .contato{margin: 0 auto; width: 30vh;margin-top: 2vh;}
+  .rodape .rodape-box .minha-conta{margin: 0 auto; width: 30vh;margin-top: 2vh;}
+  .rodape .rodape-box .institucional{margin: 0 auto; width: 30vh;margin-top: 2vh;}
+  .rodape .rodape-box .departamentos{margin: 0 auto; width: 30vh;margin-top: 2vh;}
 }
+
+
+
