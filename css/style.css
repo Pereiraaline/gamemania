@@ -401,12 +401,14 @@ header .menu.active {display: flex; height: 100vh; visibility: visible; overflow
 
   .banner {height: 50vh; width: 70vh;}
   .banner .banner-box{height: 50vh; align-items: center; justify-content: space-around;}
-  .banner .banner-box .imagem-banner{justify-content:center; size: cover;} 
-  .banner-box .imagem-banner img{border-radius: 10px; height: 240px; width: 420px; position: absolute; top: 14vh; left: 4vh; z-index: 1;}
-  .banner .banner-box .banner-info{width: 300px; height: 230px; position: absolute; z-index: 2; top: 23vh; left: 12vh;}
-  .banner .banner-box .banner-info h2{font-size: 45px; margin-bottom: 0; font-stretch: condensed;}
-  .banner .banner-box .banner-info p{font-size: 17px; margin-bottom: 0;}
-  .banner .banner-box .banner-info .botao-banner{height: 30px; width: 100px; border-radius: 8px; width: 160px; height: 40px;font-size: 15px; top: 40vh;}
+  .banner .banner-box .imagem-banner{justify-content:center; size: cover; margin: 0 auto;} 
+  /* .banner-box .imagem-banner img{border-radius: 10px; height: 240px; width: 420px; position: absolute; top: 14vh; left: 8vh; z-index: 1;} */
+  .banner-box .imagem-banner img{border-radius: 10px; height: 30vh; width: 60vh; position: absolute; z-index: 1; margin: 0 auto;}
+  /* .banner .banner-box .banner-info{width: 300px; height: 230px; position: absolute; z-index: 2; top: 23vh; left: 20vh;} */
+  .banner .banner-box .banner-info{width: 50vh; height: 27vh; position: absolute; z-index: 2; margin: 0 auto; top: auto; left: auto;}
+  .banner .banner-box .banner-info h2{font-size: 45px; margin-bottom: 5vh; font-stretch: condensed;}
+  .banner .banner-box .banner-info p{font-size: 17px; margin-bottom: 5vh;}
+  .banner .banner-box .banner-info .botao-banner{height: 40px; width: 160px; border-radius: 8px;font-size: 15px;}
     
 
   /* MAIS VENDIDOS */
