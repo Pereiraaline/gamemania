@@ -505,8 +505,8 @@ header .menu.active {
 
    /* CABEÇALHO */
    .container-grid {
-     width: 100%;
-    }
+     max-width: 100%;
+    } 
    .header-flex .btn-mobile {
      display: flex; 
      border: none; 
@@ -537,11 +537,11 @@ header .menu.active {
   /* BANNER */
 
   .banner {
-    height: 45vh; 
+    height: 300px; 
     max-width: 100%;
   }
   .banner .banner-box{
-    height: 50vh; 
+    height: 40vh; 
     align-items: center; 
     justify-content: space-around;
   }
@@ -560,9 +560,9 @@ header .menu.active {
     position: absolute; 
     z-index: 2;  
     left: auto;
-    top: 13%;
-    height: 30vh;
-    left: 6%;
+    top: 85px;
+    /* height: 30vh; */
+    max-width: 340px;
   }
   /* .banner .banner-box .banner-info{width: 300px; height: 230px; position: absolute; z-index: 2; top: 23vh; left: 20vh;} */
   .banner .banner-box .banner-info{
@@ -570,18 +570,18 @@ header .menu.active {
     position: absolute; 
     z-index: 2;  
     left: auto;
-    top: 16%; 
+    /* top: 20%;  */
   }
   .banner .banner-box .banner-info h2{
     font-size: 45px; 
     margin-top: 0;
     text-shadow: #0099ca 0.1em 0.1em 0.2em;
-    margin-bottom: 20px;
+    margin-bottom: 3%;
   }
   .banner .banner-box .banner-info p{
     font-size: 17px; 
     text-shadow: #0099ca 0.1em 0.1em 0.2em;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
   }
   .banner .banner-box .banner-info .botao-banner{
     height: 60px; 
@@ -670,14 +670,14 @@ header .menu.active {
   }
   .rodape-box{
     margin: 0 auto; 
-    width: 45vh; 
+    width: 350px; 
     display: flex; 
     flex-direction: column-reverse; 
     flex-wrap: wrap;
   }
   .rodape .redes-sociais .logo-redes-sociais{
     flex-direction: row-reverse; 
-    width: 45vh;
+    width: 350px;
     margin-top: 1vh;
     justify-content: flex-end;
     margin-inline-end: 0;
@@ -687,28 +687,28 @@ header .menu.active {
   }
   .rodape .redes-sociais h5{
     margin: 0 auto; 
-    width: 45vh;
+    width: 350px;
     margin-top: 2vh;
     font-size: 1.rem;
   }
   .rodape .rodape-box .contato{
     margin: 0 auto; 
-    width: 45vh;
+    width: 350px;
     margin-top: 2vh;
   }
   .rodape .rodape-box .minha-conta{
     margin: 0 auto; 
-    width: 45vh;
+    width: 350px;
     margin-top: 2vh;
   }
   .rodape .rodape-box .institucional{
     margin: 0 auto; 
-    width: 45vh;
+    width: 350px;
     margin-top: 2vh;
   }
   .rodape .rodape-box .departamentos{
     margin: 0 auto; 
-    width: 45vh;
+    width: 350px;
     margin-top: 2vh;
   }
   .rodape .departamentos ul{
