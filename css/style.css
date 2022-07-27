@@ -60,6 +60,7 @@ header .item-menu {
     color: black;
     text-transform: uppercase;
     font-family: "roboto regular";
+    text-shadow: #b6b6b6 0.1em 0.1em 0.1em;
     }
 
 
@@ -98,6 +99,10 @@ header .item-menu {
   border-radius: 15px;
 }
 
+#img-banner-responsivo{
+  display: none;
+}
+
 .banner .banner-box .banner-info{
     display: flex;
     width: 500px;
@@ -114,6 +119,7 @@ header .item-menu {
     color: white;
     font-family: "titiliumweb";
     text-transform: uppercase;
+    text-shadow: #211818 0.1em 0.1em 0.2em;
 }
 
 .banner .banner-box .banner-info p{
@@ -121,6 +127,7 @@ header .item-menu {
     text-align: center;
     color: #ffffff;
     justify-content: space-between;
+    text-shadow: #211818 0.1em 0.1em 0.2em;
 }
 
 .banner .banner-box .banner-info .botao-banner{
@@ -161,7 +168,7 @@ header .item-menu {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-
+  text-shadow: #211818 0.1em 0.1em 0.2em;
 }
 
 .card{
@@ -232,13 +239,14 @@ margin-top: 10px;
 }
 
 .sobre-nos-info h4{
-  font-size: 38px;
+    font-size: 38px;
     text-align: center;
     color: white;
     font-family: "titiliumweb";
     text-transform: uppercase;
     margin-block-end: 30px;
     margin-top: -30px;
+    text-shadow: #211818 0.1em 0.1em 0.2em;
     
 }
 
@@ -267,6 +275,7 @@ margin-top: 10px;
   color: #ffffff;
   font-family: "roboto regular";
   justify-content: center;
+  text-shadow: #211818 0.1em 0.1em 0.2em;
 }
 
 
@@ -344,43 +353,150 @@ margin-top: 10px;
 @media screen and (max-width: 967px){
 
   /* CABEÇALHO */
-.container-grid {max-width: 700px;}
-.header-flex .btn-mobile {display: flex; border: none; background: none; margin-inline-end: 1vh}
-.header-flex .btn-mobile img{height: 40px; width: 50px;}
-.header-flex .imagem-logo img{height: 50px;}
-header .menu {display: block; position: absolute; flex-direction: column; width: 50%; height:0px; align-items: center; justify-content: space-around; background-color:#ffffff; right: 0px; top:60px; z-index: 10000; transition:.6s; visibility: hidden; overflow-y: hidden;}
-header .menu.active {display: flex; height: 100vh; visibility: visible; overflow-y: auto;}
+.container-grid {
+  max-width: 700px;
+}
+.header-flex .btn-mobile {
+  display: flex; 
+  border: none; 
+  background: none; 
+  margin-inline-end: 1vh
+}
+.header-flex .btn-mobile img{
+  height: 40px; width: 50px;
+}
+.header-flex .imagem-logo img{
+  height: 50px;
+}
+header .menu {
+  display: flex; 
+  position: absolute; 
+  flex-direction: column; 
+  width: 50%; 
+  height:0px; 
+  align-items: center; 
+  justify-content: space-around; 
+  background-color:#ffffff; 
+  right: 0px; 
+  top:60px; 
+  z-index: 10000;
+  opacity: 0.9; 
+  transition: 0.4s, opacity 0.6s;
+  visibility: hidden; 
+  overflow-y: hidden;
+}
+header .menu .item-menu{
+  border-left: 2px dotted black;
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 10px;
+}
+header .menu.active {
+  display: flex; 
+  height: 100vh; 
+  visibility: visible; 
+  overflow-y: auto;
+}
 
-
- 
   /* BANNER */
-  .banner {height: 300px;}
-  .banner .banner-box{height: 350px; align-items: center; justify-content: space-around;}
-  .banner .banner-box .imagem-banner{justify-content:center; size: cover;} 
-  .banner-box .imagem-banner img{border-radius: 10px;height: 200px; width: 360px; position: absolute; top: 100px; left: 30px;z-index: 1;}
-  .banner .banner-box .banner-info{width: 300px; height: 200px; position: absolute; z-index: 2; top: 110px; left: 55%;}
-  .banner .banner-box .banner-info h2{font-size: 40px;}
-  .banner .banner-box .banner-info p{font-size: 15px;}
-  .banner .banner-box .banner-info .botao-banner{height: 30px; width: 100px; border-radius: 8px;width: 160px;height: 40px;font-size: 15px;}
+  .banner {
+    height: 300px;
+  }
+  .banner .banner-box{
+    height: 350px; 
+    align-items: center; 
+    justify-content: space-around;
+  }
+  .banner .banner-box .imagem-banner{
+    justify-content:center; 
+    size: cover;
+  } 
+  .banner-box .imagem-banner img{
+    border-radius: 10px;
+    height: 200px; 
+    width: 360px; 
+    position: absolute; 
+    top: 100px; 
+    left: 30px;
+    z-index: 1;
+  }
+  .banner .banner-box .banner-info{
+    width: 300px; 
+    height: 200px; 
+    position: absolute; 
+    z-index: 2; 
+    top: 110px; 
+    left: 55%;}
+  .banner .banner-box .banner-info h2{
+    font-size: 40px;
+  }
+  .banner .banner-box .banner-info p{
+    font-size: 15px;
+  }
+  .banner .banner-box .banner-info .botao-banner{
+    width: 100px; 
+    border-radius: 8px;
+    width: 160px;
+    height: 40px;
+    font-size: 15px;
+  }
  
   /* SOBRE NÓS */
-  .sobre-nos-box{height: 400px; margin-inline-end: 3%;}
-  .imagem-sobre-nos{width: 400px; margin-inline-start:2%;margin-top: -1%;}
-  .imagem-sobre-nos img{border-radius: 10px; width: 100%; height: 250px;}
-  .sobre-nos-info{width: 300px;height: 200px; margin-inline-start: 3%;}
-  .sobre-nos-info h4{ font-size: 1.25rem;margin-block-end: 10px; margin-top:-30px;}
-  .sobre-nos-info p{font-size: 0.9rem;} 
+  .sobre-nos-box{
+    height: 400px; 
+    margin-inline-end: 3%;
+  }
+  .imagem-sobre-nos{
+    width: 400px; 
+    margin-inline-start:2%;
+    margin-top: -1%;
+  }
+  .imagem-sobre-nos img{
+    border-radius: 10px; 
+    width: 100%; 
+    height: 250px;
+  }
+  .sobre-nos-info{
+    width: 300px;
+    height: 200px; 
+    margin-inline-start: 3%;
+  }
+  .sobre-nos-info h4{ 
+    font-size: 1.25rem;
+    margin-block-end: 10px; 
+    margin-top:-30px;
+  }
+  .sobre-nos-info p{
+    font-size: 0.9rem;
+  } 
 
   /* RODAPÉ */
-  .rodape-box{width: 740px;}
-  .departamentos{padding: 0; margin-right: 2%;}
-  .institucional{margin-right: 2%;}
-  .minha-conta{margin-right: 2%;}
-  .contato{margin-right: 2%;}
-  .redes-sociais .logo-redes-sociais{flex-direction: column; align-items: flex-start;}
-  .redes-sociais .logo-redes-sociais .insta{margin: 4%;}
-  .redes-sociais .logo-redes-sociais .face{margin: 4%;}
-  .redes-sociais .logo-redes-sociais .whats{margin: 4%;}
+  .rodape-box{
+    width: 740px;
+  }
+  .departamentos{
+    padding: 0; 
+    margin-right: 2%;
+  }
+  .institucional .minha-conta .contato .redes-sociais{
+    margin-right: 2%;
+  }
+  .redes-sociais h5{
+    margin-left: 22%;
+  }
+  .redes-sociais .logo-redes-sociais{
+    flex-direction: column; 
+    align-items: center;
+  }
+  .redes-sociais .logo-redes-sociais .insta{
+    margin: 5%;
+  }
+  .redes-sociais .logo-redes-sociais .face{
+    margin: 5%;
+  }
+  .redes-sociais .logo-redes-sociais .whats{
+    margin: 5%;
+  } 
 }
 
 /* SMARTPHONE */
@@ -388,62 +504,227 @@ header .menu.active {display: flex; height: 100vh; visibility: visible; overflow
 @media screen and (max-width: 767px){
 
    /* CABEÇALHO */
-   .container-grid {width: 70vh;}
-   .header-flex .btn-mobile {display: flex; border: none; background: none; margin-inline-end: 3vh}
-   .header-flex .btn-mobile img{height: 40px; width: 50px;}
-   .header-flex .imagem-logo img{height: 50px; margin-inline-start: 3vh;}
-   header .menu {display: block; position: absolute; flex-direction: column; width: 100%; justify-content: space-around; background-color:#ffffff; top:60px; z-index: 10000; left: 30%; transition:.6s; visibility: hidden; overflow-y: hidden;}
-   header .menu.active {display: flex; left: 30%; height: 100vh; visibility: visible; overflow-y: auto;}
+   .container-grid {
+     width: 100%;
+    }
+   .header-flex .btn-mobile {
+     display: flex; 
+     border: none; 
+     background: none;
+    }
+   .header-flex .btn-mobile img{
+     height: 30px; 
+     width: 40px;
+    }
+   .header-flex .imagem-logo img{
+     height: 40px; 
+     margin-inline-start: 3vh;
+    }
+    header .menu.active { 
+      height: 100vh; 
+      width: 80%;
+    }
+     header .menu .item-menu{
+      border-left: 1px dotted black;
+      padding: 5px;
+      width: 70%;
+      margin-bottom: 5px;
+      font-size: 0.9rem;
+     }
    
     
  
   /* BANNER */
 
-  .banner {height: 50vh; width: 70vh;}
-  .banner .banner-box{height: 50vh; align-items: center; justify-content: space-around;}
-  .banner .banner-box .imagem-banner{justify-content:center; size: cover; margin: 0 auto;} 
+  .banner {
+    height: 45vh; 
+    max-width: 100%;
+  }
+  .banner .banner-box{
+    height: 50vh; 
+    align-items: center; 
+    justify-content: space-around;
+  }
+  .banner .banner-box .imagem-banner{
+    justify-content:center; 
+    size: cover; 
+    margin: 0 auto;
+  } 
   /* .banner-box .imagem-banner img{border-radius: 10px; height: 240px; width: 420px; position: absolute; top: 14vh; left: 8vh; z-index: 1;} */
-  .banner-box .imagem-banner img{border-radius: 10px; height: 30vh; width: 60vh; position: absolute; z-index: 1; margin: 0 auto;}
+  .banner-box .imagem-banner img{
+    display: none;
+  }
+  #img-banner-responsivo{
+    display: flex;
+    border-radius: 10px;
+    position: absolute; 
+    z-index: 2;  
+    left: auto;
+    top: 13%;
+    height: 30vh;
+    left: 6%;
+  }
   /* .banner .banner-box .banner-info{width: 300px; height: 230px; position: absolute; z-index: 2; top: 23vh; left: 20vh;} */
-  .banner .banner-box .banner-info{width: 50vh; height: 27vh; position: absolute; z-index: 2; margin: 0 auto; top: auto; left: auto;}
-  .banner .banner-box .banner-info h2{font-size: 45px; margin-bottom: 5vh; font-stretch: condensed;}
-  .banner .banner-box .banner-info p{font-size: 17px; margin-bottom: 5vh;}
-  .banner .banner-box .banner-info .botao-banner{height: 40px; width: 160px; border-radius: 8px;font-size: 15px;}
-    
+  .banner .banner-box .banner-info{
+    max-width: 90%; 
+    position: absolute; 
+    z-index: 2;  
+    left: auto;
+    top: 16%; 
+  }
+  .banner .banner-box .banner-info h2{
+    font-size: 45px; 
+    margin-top: 0;
+    text-shadow: #0099ca 0.1em 0.1em 0.2em;
+    margin-bottom: 20px;
+  }
+  .banner .banner-box .banner-info p{
+    font-size: 17px; 
+    text-shadow: #0099ca 0.1em 0.1em 0.2em;
+    margin-bottom: 20px;
+  }
+  .banner .banner-box .banner-info .botao-banner{
+    height: 60px; 
+    width: 160px; 
+    border-radius: 8px;
+    font-size: 13px;
+    padding: 8px;
+  } 
 
   /* MAIS VENDIDOS */
 
-  #destaques{width: 70vh;} 
-  .row-cols-1{max-width: 80%;}
-  .row{margin-top: 0; border-radius: 0px; margin: 0 auto; max-width: 80%;}
-  .container.titulo h3{font-size: 1.8rem; height: 30px; margin-top: 2%;margin-bottom: 5%; margin: 0 auto;}
-  .card .card-img-top{height: 150px; width: 200px; margin: 0 auto;}
-  .card .card-body .card-title{font-size: 1.1rem;}
-  .card .card-body .card-text{font-size: 0.9rem;}
+  #destaques{
+    max-width: 100%;  
+  } 
+
+  .row{
+    border-radius: 0;
+    margin: 0 auto; 
+    max-width: 90%;
+  }
+  .container.titulo{
+    margin-top: 8px;
+  }
+  .container.titulo h3{
+    font-size: 1.8rem; 
+    height: 35px; 
+    margin-bottom: 5%; 
+    margin: 0 auto;
+  }
+  .card .card-img-top{
+    height: 150px; 
+    width: 200px; 
+    margin: 0 auto;
+  }
+  .card .card-body .card-title{
+    font-size: 1.1rem;
+  }
+  .card .card-body .card-text{
+    font-size: 0.9rem;
+  }
  
 
  /* SOBRE NÓS */
 
- .sobre-nos{width: 70vh;}
- .sobre-nos-box{height: 480px; margin-inline-end: 3%; flex-direction: column;}
- .imagem-sobre-nos{width: 320px; margin-inline-start:2%;}
- .imagem-sobre-nos img{border-radius: 10px; width: 100%; height: 230px;}
- .sobre-nos-info {width: 320px;height: 200px; margin-inline-start: 3%;}
- .sobre-nos-info h4{ font-size: 2rem; margin-block-end: 3vh; margin-top: 3vh;}
- .sobre-nos-info .p{font-size: 1.6rem;} 
- .sobre-nos-info .container-p2{display: none;} 
+ .sobre-nos{
+   max-width: 100%;
+  }
+ .sobre-nos-box{
+   height: 480px; 
+   margin-inline-end: 3%; 
+   flex-direction: column;
+  }
+
+ .imagem-sobre-nos{
+   width: 320px;
+  margin-inline-start:2%;
+  }
+ .imagem-sobre-nos img{
+   border-radius: 10px; 
+   width: 100%; 
+   height: 230px;
+  }
+ .sobre-nos-info {
+   width: 320px;
+   height: 200px; 
+   margin-inline-start: 3%;
+  }
+ .sobre-nos-info h4{ 
+   font-size: 1.5rem; 
+   margin-block-end: 3vh; 
+   margin-top: 3vh;
+  }
+ .sobre-nos-info .p{
+   font-size: 1rem;
+  } 
+ .sobre-nos-info .container-p2{
+   display: none;
+  } 
   
 
   /* RODAPÉ */
-  .rodape{width: 70vh; align-items: center; width: 70vh; height: 750px;}
-  .rodape-box{margin: 0 auto; width: 40vh; display: flex; flex-direction: column-reverse; flex-wrap: wrap;}
-  .rodape .redes-sociais .logo-redes-sociais{flex-direction: row-reverse; width: 30vh; margin: 0 auto;margin-top: 1vh}
-  .rodape .redes-sociais h5{margin: 0 auto; width: 30vh;margin-top: 2vh;}
-  .rodape .rodape-box .contato{margin: 0 auto; width: 30vh;margin-top: 2vh;}
-  .rodape .rodape-box .minha-conta{margin: 0 auto; width: 30vh;margin-top: 2vh;}
-  .rodape .rodape-box .institucional{margin: 0 auto; width: 30vh;margin-top: 2vh;}
-  .rodape .rodape-box .departamentos{margin: 0 auto; width: 30vh;margin-top: 2vh;}
+  .rodape{
+    max-width: 100%; 
+    align-items: center; 
+   height: 750px;
+  }
+  .rodape-box{
+    margin: 0 auto; 
+    width: 45vh; 
+    display: flex; 
+    flex-direction: column-reverse; 
+    flex-wrap: wrap;
+  }
+  .rodape .redes-sociais .logo-redes-sociais{
+    flex-direction: row-reverse; 
+    width: 45vh;
+    margin-top: 1vh;
+    justify-content: flex-end;
+    margin-inline-end: 0;
+  }
+  .rodape .redes-sociais .logo-redes-sociais .whats{
+    margin-inline-start: 0;
+  }
+  .rodape .redes-sociais h5{
+    margin: 0 auto; 
+    width: 45vh;
+    margin-top: 2vh;
+    font-size: 1.rem;
+  }
+  .rodape .rodape-box .contato{
+    margin: 0 auto; 
+    width: 45vh;
+    margin-top: 2vh;
+  }
+  .rodape .rodape-box .minha-conta{
+    margin: 0 auto; 
+    width: 45vh;
+    margin-top: 2vh;
+  }
+  .rodape .rodape-box .institucional{
+    margin: 0 auto; 
+    width: 45vh;
+    margin-top: 2vh;
+  }
+  .rodape .rodape-box .departamentos{
+    margin: 0 auto; 
+    width: 45vh;
+    margin-top: 2vh;
+  }
+  .rodape .departamentos ul{
+    font-size: 0.9rem;
+  }
+  .rodape .institucional ul{
+    font-size: 0.9rem;
+  }
+  .rodape .minha-conta ul{
+    font-size: 0.9rem;
+  }
+  .rodape .contato ul{
+    font-size: 0.9rem;
+  }
 }
+
 
 
 
