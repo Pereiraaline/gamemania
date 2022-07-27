@@ -346,6 +346,13 @@ margin-top: 10px;
   justify-content: space-between
 }
 
+#assinatura{
+  background-image: linear-gradient(90deg, #211818, #0099ca);
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  margin: auto;
+}
 /************** RESPONSIVIDADE  **************/
 
 /* TABLET */
