@@ -17,27 +17,45 @@
     box-sizing: border-box;
   }
 
-.header {
+  body{
+    background-image: linear-gradient(90deg, #211818, #0099ca);
+  }
+  
+  header {
     background-color: white;
-}
+    height: 70px;
+  }
+
 
 .container-grid {
+    background-color: white;
     margin: 0 auto;
     max-width: 1200px;
+    height: 70px;
     width: 100%;
     justify-content: space-between;
 }
 
 .header-flex .imagem-logo{
-  width: 120px;
+  width: 100px;
   margin-inline-start: 0%;
 }
+
+.header-flex .imagem-logo img{
+  height: 60px;
+  transition: heigth 1s;
+}
+
+.imagem-logo:hover img{
+   height: 69px;
+} 
 
 .header-flex .btn-mobile{
   display: none;
 }
 
 header .header-flex {
+    background-color: white;
     display: flex;
     height: 60px;
     flex-direction: row; 
@@ -62,6 +80,14 @@ header .item-menu {
     font-family: "roboto regular";
     text-shadow: #b6b6b6 0.1em 0.1em 0.1em;
     }
+
+.item-menu:hover { 
+  border-left: 2px dotted black;
+  padding: 7px;
+  transition: .5s;
+}
+  
+
 
 
 
@@ -93,10 +119,13 @@ header .item-menu {
   display: flexbox;
   justify-content:end;
   align-items:center;
+  margin-left: 3%;
+  overflow: hidden;
 } 
 
 .banner-box .imagem-banner img{
   border-radius: 15px;
+  transform-origin: center center;
 }
 
 #img-banner-responsivo{
@@ -113,6 +142,7 @@ header .item-menu {
     justify-content: space-between;
 }
 
+
 .banner .banner-box .banner-info h2{
     font-size: 70px;
     text-align: center;
@@ -120,6 +150,11 @@ header .item-menu {
     font-family: "titiliumweb";
     text-transform: uppercase;
     text-shadow: #211818 0.1em 0.1em 0.2em;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+  }
+.banner-info:hover h2{
+  transform: scale(1.1,1.1);
 }
 
 .banner .banner-box .banner-info p{
@@ -128,10 +163,16 @@ header .item-menu {
     color: #ffffff;
     justify-content: space-between;
     text-shadow: #211818 0.1em 0.1em 0.2em;
-}
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+  }
+
+  .banner-info:hover p{
+    transform: scale(1.1,1.1);
+  }
 
 .banner .banner-box .banner-info .botao-banner{
-   background-color: #211818;
+   background-color: #251b1b;
    height: 65px;
    width: 270px; 
    align-self: center;
@@ -146,12 +187,23 @@ header .item-menu {
    justify-content: center;
    align-items: center;
    font-size: 25px;
+   margin-top: 5%;
+   box-shadow:  #211818 0.1em 0.1em 0.2em;
+   -webkit-transition: -webkit-transform .5s ease;
+   transition: transform .5s ease;
+  }
+
+.banner .banner-box .banner-info .botao-banner:hover{
+  background-color: #160d0d;
+  transition: 0.5s;
+  transform: scale(1.2, 1.2);
 }
 
 /************** MAIS VENDIDOS **************/
 #destaques{
   background-image: linear-gradient(90deg, #211818, #0099ca);
 }
+
 
 .row{
   background-color: white;
@@ -169,18 +221,43 @@ header .item-menu {
   align-items: center;
   text-transform: uppercase;
   text-shadow: #211818 0.1em 0.1em 0.2em;
+  -webkit-transition: -webkit-transform .5s ease;
+transition: transform .5s ease;
+}
+
+.titulo:hover h3{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .card{
   justify-content: center;
   border: 10px;
   height:90%;
+  display: flex;
 }
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
  .card .card-img-top{
 height: 70%;
 margin-top: 10px;
-} 
+-webkit-transition: -webkit-transform .5s ease;
+transition: transform .5s ease;
+}
+
+.card-img-top:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+  
 
 .card .card-body h5{
   font-family:"roboto regular";
@@ -191,6 +268,32 @@ margin-top: 10px;
 .card .card-body p{
   font-family:"roboto regular";
   text-align: center;
+}
+
+
+.card-buy{
+  background-color: #037eaf;
+  border: #037eaf;
+  height: 40px;
+  width: 180px; 
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-family:"roboto regular";
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  -webkit-transition: -webkit-transform .5s ease;
+transition: transform .5s ease;
+}
+
+.card-buy:hover{
+  background-color: #006086;
+  transition: 0.5s;
+  transform: scale(1.2, 1.2);
 }
 
 
@@ -221,12 +324,20 @@ margin-top: 10px;
   display: flexbox;
   justify-content:end;
   align-items:center;
+  overflow: hidden;
 }
 
 .imagem-sobre-nos img{
   border-radius: 10px;
+  transform-origin: center center;
+  -webkit-transition: -webkit-transform .5s ease;
+transition: transform .5s ease;
 }
 
+.imagem-sobre-nos:hover{
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
 .sobre-nos-info{
   display: flex;
     width: 500px;
@@ -247,7 +358,13 @@ margin-top: 10px;
     margin-block-end: 30px;
     margin-top: -30px;
     text-shadow: #211818 0.1em 0.1em 0.2em;
-    
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+}
+
+.sobre-nos-info:hover h4{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .sobre-nos-info p{
@@ -257,20 +374,35 @@ margin-top: 10px;
     justify-content: space-between;
     text-align: justify;
     text-indent: 1.5em;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+}
+.sobre-nos-info:hover p{
+  transform: scale(1.1,1.1);
 }
 
 /************** RODAPÉ **************/
 
 .rodape{
-  background-image: linear-gradient(90deg, #211818, #0099ca);
+  max-width: 1200px;
 }
 
 .rodape-box{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+
 }
 
+.departamentos{
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+
+.departamentos:hover{  
+  transform: scale(1.1,1.1);
+  }
+  
 .rodape-box h5{
   color: #ffffff;
   font-family: "roboto regular";
@@ -293,7 +425,15 @@ margin-top: 10px;
   list-style-type: none;
 }
 
+.institucional{
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
 
+.institucional:hover{  
+  transform: scale(1.1,1.1);
+  }
+  
 
 .rodape .institucional ul{
   padding: 0;
@@ -310,6 +450,15 @@ margin-top: 10px;
   padding: 0;
 }
 
+.minha-conta{
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+
+.minha-conta:hover{  
+  transform: scale(1.1,1.1);
+  }
+  
 
 .rodape .minha-conta ul{
   padding: 0;
@@ -325,6 +474,15 @@ margin-top: 10px;
   list-style-type: none;
 }
 
+.contato{
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+
+.contato:hover{  
+  transform: scale(1.1,1.1);
+  }
+  
 .rodape .contato ul{
   text-decoration: none;
   color: #ffffff;
@@ -336,6 +494,15 @@ margin-top: 10px;
   list-style-type: none;
 }
 
+.redes-sociais{
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+
+.redes-sociais:hover{  
+  transform: scale(1.1,1.1);
+  }
+  
 .rodape .redes-sociais {
   justify-content: center;
   align-items: center;
@@ -349,10 +516,13 @@ margin-top: 10px;
 #assinatura{
   background-image: linear-gradient(90deg, #211818, #0099ca);
   display: flex;
-  color: #ffffff;
+  color: rgb(187, 187, 187);
   justify-content: center;
+  align-items: center;
   margin: auto;
+  font-size: 0.8rem;
 }
+
 /************** RESPONSIVIDADE  **************/
 
 /* TABLET */
@@ -671,9 +841,9 @@ header .menu.active {
 
   /* RODAPÉ */
   .rodape{
-    max-width: 100%; 
-    align-items: center; 
-   height: 750px;
+   max-width: 100%; 
+   align-items: center; 
+   height: 740px;
   }
   .rodape-box{
     margin: 0 auto; 

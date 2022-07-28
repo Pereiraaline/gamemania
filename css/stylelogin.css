@@ -1,9 +1,18 @@
+@font-face {
+  font-family: "roboto regular" ;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "titiliumweb" ;
+  src: url(../fonts/TitilliumWeb-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Helvetica;
-  color: #323232;
+  font-family: "roboto regular";
   border: none;
 }
 
@@ -17,10 +26,10 @@ textarea:focus, input:focus{
 }
 
 a {
-  font-size: .8rem;
+  font-size: .9rem;
 }
 
-a:hover {
+a:hover { 
   color: #08558B;
 }
 
@@ -34,6 +43,7 @@ a:hover {
   margin-top: 10vh;
   border-radius: 10px;
   text-align: center;
+  margin-bottom: 3vh;
 }
 
 /* formulário */
@@ -50,7 +60,7 @@ label, input {
 
 label {
   font-weight: bold;
-  font-size: .8rem;
+  font-size: .9rem;
 }
 
 input {
@@ -61,7 +71,7 @@ input {
 }
 
 input:focus {
-  border-bottom: 2px solid #08558B;
+  border-bottom: 2px solid #05185f;
 }
 
 #forgot-pass {
@@ -74,16 +84,17 @@ input[type="submit"] {
   text-transform: uppercase;
   border: none;
   height: 40px;
-  border-radius: 20px;
+  border-radius: 10px;
   margin-top: 30px;
   cursor: pointer;
   color: #FFF;
-  background-color: #08558B;
+  background-color: #251b1b;
   font-weight: bold;
+  font-family: "titiliumweb";
 }
 
 input[type="submit"]:hover {
-  background-color: #1B223C;
+  background-color: #160d0d;
   transition: .5s;
 }
 
@@ -91,3 +102,45 @@ input[type="submit"]:hover {
 #register-container p {
   margin-bottom: 10px;
 }
+
+#assinatura{
+  color: rgb(187, 187, 187);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 0.8rem;
+}
+
+/************** RESPONSIVIDADE  **************/
+
+/* SMARTPHONE */
+
+@media screen and (max-width: 767px){
+  #login-container {
+    max-width: 330px;
+    margin-top: 8vh;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 3vh;
+  }
+  #login-container img{
+    max-width: 70%;
+    margin-bottom: 3px;
+    margin-top: 0;
+  }
+
+  form {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  input {
+    margin-bottom: 10px;
+  }
+  input[type="submit"] {
+    height: 35px;
+    border-radius: 10px;
+    margin-top: 30px;
+  }
+}
+
+
