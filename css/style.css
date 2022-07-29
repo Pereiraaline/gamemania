@@ -618,6 +618,29 @@ header .menu.active {
     font-size: 15px;
   }
  
+/* MAIS VENDIDOS */
+  .card-buy{
+    width: 70%;
+    height: 70%;
+    font-size: 12px;
+  }
+
+  .card .card-body h5{
+   font-size: 15px;
+  }
+  
+  .card .card-body p{
+    font-size: 12px;
+  }
+  
+  .container.titulo h3{
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+  }
+  
+
   /* SOBRE NÓS */
   .sobre-nos-box{
     height: 400px; 
